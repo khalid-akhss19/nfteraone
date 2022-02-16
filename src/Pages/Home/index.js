@@ -1,9 +1,19 @@
 import React from "react";
 
+import HeroSection from "../../Components/HeroSection";
+import MapCarasoulTopArtist from "../../Components/mapCarasoulTopArtist";
+// import TopArtistSection from "../../Components/TopArtistSection";
+
 const Home = () => {
   return (
     <>
-      <h3>HelloHome</h3>
+      <div>
+        <HeroSection />
+      </div>
+
+      <div>
+        <MapCarasoulTopArtist />
+      </div>
     </>
   );
 };
