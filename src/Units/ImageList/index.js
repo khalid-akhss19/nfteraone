@@ -128,4 +128,9 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
+  all: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
 }));

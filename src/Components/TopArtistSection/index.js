@@ -23,7 +23,11 @@ const TopArtistSection = ({ img, title, subtitle }) => {
           mt={5}
         >
           <Box borderRadius="90px" ml={3}>
-            <img src={img} alt="prof top artist" />
+            <img
+              src={img}
+              alt="prof top artist"
+              className={classes.roundimage}
+            />
           </Box>
           <Box ml={2}>
             <Typography variant="h6" className={classes.topArtistHeading}>
@@ -46,6 +50,25 @@ const useStyles = makeStyles((theme) => ({
     // borderColor: "red",
     display: "flex",
     border: "none",
+
+    [theme.breakpoints.down("sm")]: {
+      width: "200px",
+      height: "80px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "150px",
+      height: "60px",
+    },
+  },
+  roundimage: {
+    [theme.breakpoints.down("sm")]: {
+      width: "60px",
+      height: "60px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "50px",
+      height: "45px",
+    },
   },
   topArtistHeading: {
     color: "rgba(23, 60, 86, 1)",
@@ -53,6 +76,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     lineHeight: "21.94px",
     fontWeight: "400",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 14,
+      lineHeight: "11.94px",
+      fontWeight: 300,
+    },
   },
   topArtistsubHeading: {
     color: "rgba(23, 60, 86, 1)",
@@ -60,15 +88,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     lineHeight: "17px",
     fontWeight: "400",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 12,
+      lineHeight: "12px",
+      fontWeight: "300",
+    },
   },
-  // link: {
-  //   [theme.breakpoints.down("sm")]: {
-  //     display: "block",
-  //     "&:hover": {
-  //       color: "black",
-  //       border: "none",
-  //       paddingBottom: "5px",
-  //     },
-  //   },
-  // },
 }));
