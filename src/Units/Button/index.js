@@ -8,7 +8,7 @@ const SimpleButton = () => {
   return (
     <div className={classes.root}>
       <Button variant="contained" className={classes.buuuton}>
-        Primary
+        Wallet
       </Button>
     </div>
   );

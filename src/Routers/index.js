@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 // import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import Marketplace from "../Pages/Marketplace";
 
 const Routers = () => {
   return (
@@ -13,7 +15,9 @@ const Routers = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Marketplace" element={<Marketplace />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

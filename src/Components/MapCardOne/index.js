@@ -5,6 +5,7 @@ import { Grid, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import { useStyles } from "./style";
+import WrappperMargin from "../../Components/WrappperMargin";
 
 const MapCardOne = () => {
   const classes = useStyles();
@@ -16,11 +17,13 @@ const MapCardOne = () => {
       className={classes.CardMapContainer}
     >
       <Grid container alignItems="center" className={classes.CardMapCenter}>
-        <Grid item container xs={12} className={classes.CardMapTitle}>
-          <Typography variant="h4" className={classes.bbb}>
-            Explore
-          </Typography>
-        </Grid>
+        <WrappperMargin>
+          <Grid item container xs={12} className={classes.CardMapTitle}>
+            <Typography variant="h4" className={classes.bbb}>
+              Explore
+            </Typography>
+          </Grid>
+        </WrappperMargin>
 
         <Grid
           item
@@ -69,11 +72,11 @@ const MapCardOne = () => {
           })}
         </Grid>
 
-        <div>
-          <Button variant="contained" color="primary">
-            Primary
+        <Grid item container xs={12} justify="center">
+          <Button variant="contained" className={classes.btnbtn}>
+            View all items
           </Button>
-        </div>
+        </Grid>
       </Grid>
     </Grid>
   );

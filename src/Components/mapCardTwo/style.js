@@ -4,27 +4,23 @@ export const useStyles = makeStyles((theme) => ({
   CardMapContainer: {
     background: "#e2f5ff",
   },
-  navlink: {
-    textDecoration: "none",
-    color: "rgba(23, 60, 86, 1)",
-  },
   CardMapCenter: {
     marginBottom: "30px",
+    // width: "350px",
   },
   bbb: {
-    fontSize: 38,
-    marginRight: "60px",
+    fontSize: 20,
     color: "rgba(23, 60, 86, 1)",
+  },
+  bbbc: {
+    fontSize: 20,
+    color: "rgba(23, 60, 86, 1)",
+    alignItems: "right",
   },
   CardMapTitle: {
     marginBottom: "50px",
   },
   CardMapLinks: {
     paddingBottom: "25px",
-  },
-  btnbtn: {
-    backgroundColor: "white",
-    borderRadius: "90px",
-    color: "rgba(23, 60, 86, 1)",
   },
 }));

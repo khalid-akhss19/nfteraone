@@ -4,12 +4,13 @@ import HeroSection from "../../Components/HeroSection";
 import MapCarasoulTopArtist from "../../Components/mapCarasoulTopArtist";
 
 import MapCardOne from "../../Components/MapCardOne";
-import CardTwo from "../../Components/CardTwo";
+import MapCardTwo from "../../Components/mapCardTwo";
+import StartCollection from "../../Components/StartCollection";
+import LoveByCommunity from "../../Components/LoveByCommunity";
 
 const Home = () => {
   return (
     <>
-      {/* <Typography variant="h1">Hello </Typography> */}
       <div>
         <HeroSection />
       </div>
@@ -20,7 +21,13 @@ const Home = () => {
         <MapCardOne />
       </div>
       <div>
-        <CardTwo />
+        <MapCardTwo />
+      </div>
+      <div>
+        <StartCollection />
+      </div>
+      <div>
+        <LoveByCommunity />
       </div>
     </>
   );

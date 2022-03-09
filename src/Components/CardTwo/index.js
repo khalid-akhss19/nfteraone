@@ -2,30 +2,21 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
-import small1 from "../../Assets/Images/cardemage21.png";
-import small2 from "../../Assets/Images/cardemage22.png";
-import small3 from "../../Assets/Images/cardemage23.png";
-import one from "../../Assets/Images/Rectangle 39.png";
-import two from "../../Assets/Images/imagebig2.png";
-import three from "../../Assets/Images/imagebig3.png";
+// import small1 from "../../Assets/Images/cardemage21.png";
+// import small2 from "../../Assets/Images/cardemage22.png";
+// import small3 from "../../Assets/Images/cardemage23.png";
+// import one from "../../Assets/Images/Rectangle 39.png";
+// import two from "../../Assets/Images/imagebig2.png";
+// import three from "../../Assets/Images/imagebig3.png";
 import profile1 from "../../Assets/Images/Ellipse 9.png";
 
-const CardTwo = () => {
+const CardTwo = ({ img, imgsmallA, imgsmallB, imgsmallC }) => {
   const classes = useStyles();
   return (
     <>
-      <Box
-        className={classes.CardOneContainer}
-        width="416px"
-        height="497.31px"
-        borderColor="brown"
-        border={2}
-        borderRadius="15px"
-        bgcolor="skyblue"
-      >
+      <Box className={classes.CardOneContainer}>
         <Box p={2}>
           <Box
             className={classes.cardTwo3image}
@@ -34,19 +25,31 @@ const CardTwo = () => {
             justifyContent="space-evenly"
           >
             <Box className={classes.cardTwo3image11}>
-              <img src={small1} alt="pic" className={classes.cardTwo3image1} />
+              <img
+                src={imgsmallA}
+                alt="pic sm1"
+                className={classes.cardTwo3image1}
+              />
             </Box>
             <Box className={classes.cardTwo3image11}>
-              <img src={small2} alt="pic" className={classes.cardTwo3image1} />
+              <img
+                src={imgsmallB}
+                alt="pic sm2"
+                className={classes.cardTwo3image1}
+              />
             </Box>
             <Box className={classes.cardTwo3image11}>
-              <img src={small3} alt="pic" className={classes.cardTwo3image1} />
+              <img
+                src={imgsmallC}
+                alt="pic sm3"
+                className={classes.cardTwo3image1}
+              />
             </Box>
           </Box>
           <Box align="center" justify="center" pt={1}>
             <img
-              src={one}
-              alt="pic"
+              src={img}
+              alt="pic bigone"
               className={classes.cardTwo3imageBig}
               borderRadius="5px"
             />
@@ -55,7 +58,7 @@ const CardTwo = () => {
             <Typography>Creative Art collection</Typography>
 
             <Box display="flex" flexDirection="row">
-              <FavoriteIcon />
+              <FavoriteIcon className={classes.HeartIcon} />
               <Typography className={classes.CardtwoHeart}> .5K</Typography>
             </Box>
           </Box>
@@ -87,10 +90,24 @@ const CardTwo = () => {
 export default CardTwo;
 
 const useStyles = makeStyles((theme) => ({
-  cardTwo3image: {},
+  CardOneContainer: {
+    width: "400px",
+    height: "497.31px",
+    borderRadius: "15px",
+    backgroundColor: "white",
+    [theme.breakpoints.down("sm")]: {
+      width: "300px",
+      height: "397.31px",
+      borderRadius: "15px",
+    },
+  },
   cardTwo3image1: {
-    width: "113.69px",
-    height: "86.28px",
+    width: "100.69px",
+    height: "76.28px",
+    [theme.breakpoints.down("sm")]: {
+      width: "80.69px",
+      height: "66.28px",
+    },
   },
   cardOnehistry: {
     fontFamily: "Montserrat",
@@ -100,8 +117,12 @@ const useStyles = makeStyles((theme) => ({
     // color: theme.,
   },
   cardTwo3imageBig: {
-    width: "369.61px",
-    height: "277.94px",
+    width: "359.61px",
+    height: "267.94px",
+    [theme.breakpoints.down("sm")]: {
+      width: "270.61px",
+      height: "200.94px",
+    },
   },
   CardTwoCollection: {
     fontFamily: "Montserrat",
@@ -115,8 +136,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "10px",
     fontWeight: 400,
     lineHeight: "17px",
-
+    cursor: "pointer",
     color: theme.palette.secondary.main,
+  },
+  HeartIcon: {
+    cursor: "pointer",
+    color: "rgba(98, 98, 98, 1)",
+    width: "14.09px",
+
+    height: "14.09px",
   },
   cardTwolastportion: {
     color: "rgba(23, 60, 86, 1)",

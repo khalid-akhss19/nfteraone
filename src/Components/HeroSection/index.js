@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "700",
     lineHeight: "59px",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "35px",
+      fontSize: "30px",
       fontWeight: "500",
       lineHeight: "30px",
     },
@@ -71,9 +71,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     lineHeight: "22px",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "13px",
+      fontSize: "15px",
       fontWeight: 300,
-      lineHeight: "18px",
+      lineHeight: "15px",
+      padding: "10px",
     },
   },
 }));
