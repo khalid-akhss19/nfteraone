@@ -101,13 +101,11 @@ const SortByBtn = () => {
 export default SortByBtn;
 
 const useStyles = makeStyles((theme) => ({
-  SwitchButnArtwork: {
-    paddingRight: "10px",
-  },
   sortByBtn: {
     borderRadius: "90px",
     color: "white",
     backgroundColor: "rgba(23, 60, 86, 1)",
     fontFamily: "Montserrat",
+    [theme.breakpoints.down("xs")]: {},
   },
 }));

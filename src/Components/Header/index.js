@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <Box pt={3} className={classes.mainConntainers}>
-        <box className={classes.navPartOne}>
+        <Box className={classes.navPartOne}>
           <Box className={classes.navlogomain}>
             <img src={logo} alt="logo here" />
           </Box>
@@ -34,9 +34,9 @@ const Header = () => {
               Faq
             </Link>
           </Box>
-        </box>
+        </Box>
         {/* right side of header */}
-        <box className={classes.navPartTwo}>
+        <Box className={classes.navPartTwo}>
           <Box
             bgcolor="#173C56"
             color="white"
@@ -64,7 +64,7 @@ const Header = () => {
           <Box className={classes.navIconContainer}>
             <AccountCircleIcon className={classes.navCirclesIcon} />
           </Box>
-        </box>
+        </Box>
       </Box>
     </>
   );

@@ -41,6 +41,7 @@ const LoveByCommunity = () => {
 };
 
 export default LoveByCommunity;
+
 const useStyles = makeStyles((theme) => ({
   contaonerstrtcollection: {
     background: "#e2f5ff",

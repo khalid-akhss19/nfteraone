@@ -43,5 +43,9 @@ const Links = () => {
 export default Links;
 
 const useStyles = makeStyles((theme) => ({
-  Links: {},
+  Links: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
 }));

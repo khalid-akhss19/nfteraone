@@ -19,7 +19,7 @@ const SwitchButn = () => {
   };
   return (
     <>
-      <Box display="flex" justifyContent="space-between" pt={2}>
+      <Box pt={2} className={classes.filterfilter}>
         <Box className={classes.OneOne}>
           <Typography variant="body1" className={classes.Filterbytext1}>
             FILTER BY:
@@ -30,7 +30,6 @@ const SwitchButn = () => {
                 checked={state.checkedA}
                 onChange={handleChange}
                 name="checkedA"
-                className={classes.SwitchButnOne}
                 color="primary"
               />
             }
@@ -73,6 +72,15 @@ const SwitchButn = () => {
 export default SwitchButn;
 
 const useStyles = makeStyles((theme) => ({
+  filterfilter: {
+    display: "flex",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "space-evenly",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
   Filterbytext2: {
     color: "rgba(23, 60, 86, 1)",
     fontFamily: "Montserrat",
@@ -92,5 +100,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     gap: "1em",
+    [theme.breakpoints.down("xs")]: {
+      // flexDirection: "column",
+      // alignItems: "center",
+      // gap: "0em",
+      display: "none",
+    },
   },
 }));
